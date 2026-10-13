@@ -132,3 +132,16 @@ html[lang=es] [data-l]:not([data-l=es]),html[lang=en] [data-l]:not([data-l=en]),
 .top.dark:not(.solid) .langsw button{color:#fff}.top.dark:not(.solid) .langsw button[aria-pressed=true]{background:#fff;color:var(--ink)}
 .top.dark:not(.solid) nav a.lnk{color:#fff}
 @media print{.top,.sticky,.g-actions,.dunes{display:none!important}.g-hero{background:none;color:#000;padding:20px 0}.g-hero h1{color:#000}.g-body{margin:0}.g-sec{box-shadow:none;break-inside:avoid}.rv{opacity:1!important;transform:none!important}html.noowner .owner,html.noowner .g-body>p{display:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.langsel{display:inline-flex;align-items:center;gap:6px;border:1.5px solid currentColor;border-radius:999px;padding:0 8px 0 10px;min-height:40px;color:var(--ink)}
+.langsel select{font:inherit;font-size:.88rem;font-weight:700;border:0;background:transparent;color:inherit;min-height:38px;max-width:46vw;cursor:pointer}
+.langsel select option{color:var(--ink)}
+.langsel:focus-within{outline:3px solid var(--sun);outline-offset:3px}.langsel select:focus-visible{outline:none}
+.top.dark:not(.solid) .langsel{color:#fff}
+.g-cta{text-align:center;margin-top:30px}
+html[lang=fr] [data-l]:not([data-l=fr]),html[lang=nl] [data-l]:not([data-l=nl]),html[lang=nb] [data-l]:not([data-l=nb]),html[lang=sv] [data-l]:not([data-l=sv]){display:none!important}
+.brand{white-space:nowrap}@media(max-width:380px){.brand{font-size:.95rem}}
+.ctarow{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.legal{border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:22px}
+.legal dl{display:grid;gap:12px;margin:0 0 20px}@media(min-width:720px){.legal dl{grid-template-columns:repeat(4,auto);justify-content:start;column-gap:40px}}
+.legal dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#8fa6b8;font-weight:700}.legal dd{margin:2px 0 0;color:#fff;word-break:break-word}
