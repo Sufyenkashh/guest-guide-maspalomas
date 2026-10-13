@@ -2,7 +2,7 @@
 var saved=null;try{saved=new URLSearchParams(location.search).get('lang')||localStorage.getItem('ggp-lang')}catch(e){}
 function setLang(l){if(!document.querySelector('[data-l="'+l+'"]')&&!document.getElementById(l))return;d.lang=l;
 document.querySelectorAll('[data-setlang]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.setlang===l)});document.querySelectorAll('[data-langselect]').forEach(function(x){x.value=l});
-var t=d.getAttribute('data-title-'+l);if(t)document.title=t;try{localStorage.setItem('ggp-lang',l)}catch(e){}
+var t=d.getAttribute('data-title-'+l);if(t)document.title=t;var ds=d.getAttribute('data-desc-'+l),md=document.querySelector('meta[name=description]');if(ds&&md)md.content=ds;try{localStorage.setItem('ggp-lang',l)}catch(e){}
 document.dispatchEvent(new CustomEvent('langchange',{detail:l}))}
 document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.setlang)})});
 document.querySelectorAll('[data-langselect]').forEach(function(x){x.addEventListener('change',function(){setLang(x.value)})});
